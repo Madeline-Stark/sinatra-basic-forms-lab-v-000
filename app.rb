@@ -11,7 +11,7 @@ class App < Sinatra::Base
   end
 
 
-  post '/display_puppy' do
+  post '/' do
     text_from_user = params
     @analyzed_text = Puppy.new(text_from_user[:name], text_from_user[:breed], text_from_user[:age])
     erb :display_puppy
